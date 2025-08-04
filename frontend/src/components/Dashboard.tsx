@@ -41,8 +41,8 @@ interface Milestone {
   status: "Pending" | "Achieved" | "Overdue"
   projectId: string
   clientId: string
-  estimateId?: string
-  isAchived?: boolean
+  estimateId: string
+  isAchived: boolean
   achievedDate?: string
 }
 
@@ -364,45 +364,7 @@ export default function Dashboard() {
     ],
   }
 
-  const chartOptions = {
-    responsive: true,
-    maintainAspectRatio: false,
-    plugins: {
-      legend: {
-        position: "top" as const,
-        labels: {
-          usePointStyle: true,
-          padding: 20,
-          font: {
-            size: 12,
-            weight: "500",
-          },
-        },
-      },
-    },
-    scales: {
-      x: {
-        grid: {
-          display: false,
-        },
-        ticks: {
-          font: {
-            size: 11,
-          },
-        },
-      },
-      y: {
-        grid: {
-          color: "rgba(0, 0, 0, 0.05)",
-        },
-        ticks: {
-          font: {
-            size: 11,
-          },
-        },
-      },
-    },
-  }
+ 
 
   if (loading) {
     return (
@@ -479,14 +441,14 @@ export default function Dashboard() {
         <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
           <h3 className="text-lg font-semibold text-gray-900 mb-4">Revenue & Expenses</h3>
           <div className="h-64">
-            <Line data={revenueChartData} options={chartOptions} />
+            <Line data={revenueChartData} />
           </div>
         </div>
 
         <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
           <h3 className="text-lg font-semibold text-gray-900 mb-4">Expense Breakdown</h3>
           <div className="h-64">
-            <Bar data={expenseChartData} options={chartOptions} />
+            <Bar data={expenseChartData} />
           </div>
         </div>
       </div>

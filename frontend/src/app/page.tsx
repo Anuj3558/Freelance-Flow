@@ -7,7 +7,6 @@ import EstimateGenerator from "../components/EstimateGenerator"
 import PaymentTracking from "../components/PaymentTracking"
 import Login from "../components/Login"
 import Cookies from "js-cookie"
-import { notification } from "antd"
 import { useNotification } from "../components/ui/notification"
 import ExpenseManagement from "../components/Expenses"
 
@@ -217,7 +216,7 @@ export default function Home() {
         </button>
       </div>
 
-      <style jsx>{`
+      <style >{`
         .scrollbar-hide {
           -ms-overflow-style: none;
           scrollbar-width: none;

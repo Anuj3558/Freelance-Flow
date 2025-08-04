@@ -128,17 +128,7 @@ export default function ClientManagement() {
   }, [])
 
   // Calculate statistics
-  const stats = React.useMemo(() => {
-    const safeClients = getSafeClients()
-    const activeClients = safeClients.filter((c) => c.status === "Active").length
-    const totalProjects = safeClients.reduce((sum, c) => sum + (c.projects || 0), 0)
 
-    return {
-      totalClients: safeClients.length,
-      activeClients,
-      totalProjects,
-    }
-  }, [clients])
 
   // Filter clients based on search and status
   const filteredClients = React.useMemo(() => {
@@ -647,7 +637,7 @@ export default function ClientManagement() {
           <Select
             label="Status"
             value={formData.status}
-            onChange={(e) => setFormData({ ...formData, status: e.target.value })}
+            onChange={(e : React.ChangeEvent<HTMLInputElement>) => setFormData({ ...formData, status: e.target.value })}
             options={[
               { value: "Active", label: "Active" },
               { value: "Inactive", label: "Inactive" },
@@ -836,7 +826,7 @@ export default function ClientManagement() {
           />
 
           <Select
-            label="Status"
+            
             value={projectFormData.status}
             onChange={(e) => setProjectFormData({ ...projectFormData, status: e.target.value })}
             options={[

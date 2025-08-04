@@ -25,7 +25,7 @@ export default function Login({ onLogin }: LoginProps) {
   const verifyToken = async () => {
     if (Cookies.get("jwt_token")) {
       try {
-        const response = await fetch(`http://localhost:5000/api/auth/verify-token`, {
+        const response = await fetch(`https://freelance-flow-0cfy.onrender.com/api/auth/verify-token`, {
           method: "GET",
           headers: {
             Authorization: `Bearer ${Cookies.get("jwt_token")}`,
@@ -69,7 +69,7 @@ export default function Login({ onLogin }: LoginProps) {
       }
 
       const endpoint = isLogin ? "login" : "create-account"
-      const response = await fetch(`http://localhost:5000/api/auth/${endpoint}`, {
+      const response = await fetch(`https://freelance-flow-0cfy.onrender.com/api/auth/${endpoint}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -117,7 +117,7 @@ export default function Login({ onLogin }: LoginProps) {
   const demoLogin = async () => {
     try {
       setLoading(true)
-      const response = await fetch("http://localhost:5000/api/auth/demo-login", {
+      const response = await fetch("https://freelance-flow-0cfy.onrender.com/api/auth/demo-login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
