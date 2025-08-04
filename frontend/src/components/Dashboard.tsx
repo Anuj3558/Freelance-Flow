@@ -93,7 +93,7 @@ export default function Dashboard() {
   const [expenseData, setExpenseData] = useState<ExpenseBreakdown[]>([])
 
   // API URLs
-  const API_URL = "http://localhost:5000/api"
+  const API_URL = "https://freelance-flow-0cfy.onrender.com/api"
   const ANALYTICS_API_URL = `${API_URL}/analytics`
   const MILESTONES_API_URL = `${API_URL}/milestones`
 
