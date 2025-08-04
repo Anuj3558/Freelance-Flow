@@ -5,7 +5,7 @@ import Cookies from "js-cookie"
 import { useNotification } from "./ui/notification"
 import { Button } from "./ui/button"
 import { Input, TextArea } from "./ui/input"
-import { Select } from "./ui/select"
+import { Select, SelectComponent } from "./ui/select"
 import { Modal } from "./ui/modal"
 import { CardSkeleton, TableSkeleton } from "./ui/skeleton"
 
@@ -30,7 +30,7 @@ interface Client {
   projectsList?: Project[]
 }
 
-const API_URL = "http://localhost:5000/api/clients"
+const API_URL = "https://freelance-flow-0cfy.onrender.com/api/clients"
 
 export default function ClientManagement() {
   const { addNotification } = useNotification()
@@ -634,8 +634,8 @@ export default function ClientManagement() {
             />
           </div>
 
-          <Select
-            label="Status"
+          <SelectComponent
+            SelectLabel="Status"
             value={formData.status}
             onChange={(e : React.ChangeEvent<HTMLInputElement>) => setFormData({ ...formData, status: e.target.value })}
             options={[

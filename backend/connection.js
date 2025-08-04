@@ -1,9 +1,9 @@
 import mongoose from 'mongoose';
 
-
-const connectToDb = async () => {
+ 
+const connectToDb = async (uri) => {
   try {
-    const uri = process.env.MONGODB_URI ;
+   console.log("Connecting to MongoDB at:", uri);
     await mongoose.connect(uri, {
       useNewUrlParser: true,
       useUnifiedTopology: true,

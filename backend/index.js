@@ -20,6 +20,8 @@ config(); // Load environment variables from .env file
 const app = express();
 const PORT = process.env.PORT || 3002;
 
+ const uri = process.env.MONGODB_URI;
+ console.log("MongoDB URI:", uri);
 // CORS configuration
 app.use(cors({
   origin: '*', // Allow all origins — not recommended for production
@@ -34,7 +36,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.text({ type: 'text/plain' }));
 
 // Connect to database first
-await connectToDb();
+await connectToDb(uri);
 
 // Initialize cascade delete middleware AFTER database connection and models are loaded
 initializeCascadeDelete();

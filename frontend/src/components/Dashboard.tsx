@@ -164,21 +164,7 @@ export default function Dashboard() {
     } catch (error) {
       console.error("Error fetching analytics:", error)
       // Fallback to default data if backend is not available
-      setRevenueData([
-        { month: "Jan", revenue: 12000, expenses: 800 },
-        { month: "Feb", revenue: 15000, expenses: 900 },
-        { month: "Mar", revenue: 8000, expenses: 700 },
-        { month: "Apr", revenue: 18000, expenses: 1000 },
-        { month: "May", revenue: 22000, expenses: 1200 },
-        { month: "Jun", revenue: 25000, expenses: 1100 },
-      ])
-      setExpenseData([
-        { category: "Software", amount: 800 },
-        { category: "Tools", amount: 400 },
-        { category: "Marketing", amount: 300 },
-        { category: "Office", amount: 500 },
-        { category: "Other", amount: 200 },
-      ])
+     
     }
   }
 
@@ -222,7 +208,7 @@ export default function Dashboard() {
                 ? {
                     ...milestone,
                     status: "Achieved" as const,
-                    isAchieved: true,
+                    isAchived: true,
                     achievedDate: new Date().toISOString(),
                   }
                 : milestone,
@@ -240,7 +226,7 @@ export default function Dashboard() {
                       ? {
                           ...milestone,
                           status: "Achieved" as const,
-                          isAchieved: true,
+                          isAchived: true,
                           achievedDate: new Date().toISOString(),
                         }
                       : milestone,
@@ -276,7 +262,7 @@ export default function Dashboard() {
 
   // Calculate milestone status
   const getMilestoneStatus = (milestone: Milestone) => {
-    if (milestone.isAchieved || milestone.status === "Achieved") {
+    if (milestone.isAchived || milestone.status === "Achieved") {
       return "Achieved"
     }
 
