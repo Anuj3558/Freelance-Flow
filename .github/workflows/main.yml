@@ -12,4 +12,4 @@ jobs:
     steps:
       - name: Make GET request to freelance-flow
         run: |
-          curl -s -o  https://freelance-flow-0cfy.onrender.com/
+          curl -s -o /dev/null -w "%{http_code}\n" https://freelance-flow-0cfy.onrender.com/
