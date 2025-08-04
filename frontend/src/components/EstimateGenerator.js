@@ -23,8 +23,8 @@ export default function EstimateGenerator() {
     const [showExistingOnly, setShowExistingOnly] = useState(false);
     const [hasSelectedEstimate, setHasSelectedEstimate] = useState(false);
     // API URL - same as Client Management
-    const API_URL = "http://localhost:5000/api/clients";
-    const ESTIMATES_API_URL = "http://localhost:5000/api/estimates";
+    const API_URL = "https://freelance-flow-0cfy.onrender.com/api/clients";
+    const ESTIMATES_API_URL = "https://freelance-flow-0cfy.onrender.com/api/estimates";
     // Get JWT token from cookies (same as Client Management)
     const getAuthToken = () => {
         const token = Cookies.get("jwt_token");

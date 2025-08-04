@@ -25,9 +25,9 @@ export default function IntegratedProjectFlow() {
     const [generatedMilestones, setGeneratedMilestones] = useState([]);
     const [projectWithMilestones, setProjectWithMilestones] = useState(null);
     // API URLs
-    const API_URL = "http://localhost:5000/api/clients";
-    const ESTIMATES_API_URL = "http://localhost:5000/api/estimates";
-    const MILESTONES_API_URL = "http://localhost:5000/api/milestones";
+    const API_URL = "https://freelance-flow-0cfy.onrender.com/api/clients";
+    const ESTIMATES_API_URL = "https://freelance-flow-0cfy.onrender.com/api/estimates";
+    const MILESTONES_API_URL = "https://freelance-flow-0cfy.onrender.com/api/milestones";
     // Get JWT token from cookies
     const getAuthToken = () => {
         const token = Cookies.get("jwt_token");

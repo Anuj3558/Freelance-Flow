@@ -27,7 +27,7 @@ export default function Dashboard() {
     const [revenueData, setRevenueData] = useState([]);
     const [expenseData, setExpenseData] = useState([]);
     // API URLs
-    const API_URL = "http://localhost:5000/api";
+    const API_URL = "https://freelance-flow-0cfy.onrender.com/api";
     const ANALYTICS_API_URL = `${API_URL}/analytics`;
     const MILESTONES_API_URL = `${API_URL}/milestones`;
     // Get JWT token from cookies

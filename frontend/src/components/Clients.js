@@ -8,7 +8,7 @@ import { Input, TextArea } from "./ui/input";
 import { Select } from "./ui/select";
 import { Modal } from "./ui/modal";
 import { CardSkeleton, TableSkeleton } from "./ui/skeleton";
-const API_URL = "http://localhost:5000/api/clients";
+const API_URL = "https://freelance-flow-0cfy.onrender.com/api/clients";
 export default function ClientManagement() {
     const { addNotification } = useNotification();
     const [clients, setClients] = useState([]);

@@ -9,7 +9,7 @@ import { Modal } from "./ui/modal";
 import { Table, TableHeader, TableBody, TableRow, TableHead, TableCell } from "./ui/table";
 import { CardSkeleton, TableSkeleton } from "./ui/skeleton";
 import { useNotification } from "./ui/notification";
-const API_URL = "http://localhost:5000/api/expenses";
+const API_URL = "https://freelance-flow-0cfy.onrender.com/api/expenses";
 const EXPENSE_CATEGORIES = [
     "Software & Tools",
     "Hardware & Equipment",
